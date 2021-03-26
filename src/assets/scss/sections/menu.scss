@@ -1,0 +1,23 @@
+.menu{
+  display: flex;
+  flex-flow:row nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  &_link{
+    color:$black;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    padding:0 10px;
+
+    @media screen and (max-height: $height_170){
+      font-size: 11px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active{
+      color:$cherry;
+    }
+  }
+}

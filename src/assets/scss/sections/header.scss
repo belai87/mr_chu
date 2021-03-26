@@ -1,0 +1,72 @@
+.header{
+  background-color: rgba(0, 0, 0, .05);
+
+  &_wrapper{
+    display: flex;
+    flex-flow:row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding:25px 0;
+
+    @media screen and (max-height: $height_120){
+      padding:10px 0;
+    }
+    @media screen and (max-height: $height_150){
+
+    }
+    @media screen and (max-height: $height_170){
+
+    }
+  }
+
+  &_contacts{
+    display: flex;
+    flex-flow:row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &_logo{
+    width: 73px;
+    height:73px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &_phones{
+    display: flex;
+    flex-flow:column;
+    justify-content: space-between;
+    margin-right: 30px;
+    @media screen and (max-height: $height_170){
+      margin-right: 15px;
+    }
+
+    &__margin{
+      margin-bottom: 10px;
+    }
+  }
+
+  &_feedback{
+    width: 205px;
+    height: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #A91E23;
+    border-radius: 48px;
+    color:#fff;
+    font-weight: 500;
+    font-size: 15px;
+    box-shadow: 0 4px 31px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+
+    @media screen and (max-height: $height_170){
+      width: 150px;
+      height: 47px;
+      border-radius: 35px;
+      font-size: 12.4755px;
+    }
+  }
+}

@@ -1,0 +1,242 @@
+.franchise{
+  position: relative;
+  background-color: rgba(0, 0, 0, .05);
+  overflow: hidden;
+
+  &_round{
+    width: 100%;
+    margin:50px auto 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 10;
+    overflow: hidden;
+    padding: 0 0 150px 0;
+
+    @media screen and (max-height: $height_120){
+      margin:0 auto;
+    }
+
+    @media screen and (max-height: $height_170){
+      padding: 0 0 65px 0;
+    }
+  }
+
+  &__container{
+    @media screen and (max-height: $height_120){
+      height: calc(100vh - 140px);
+    }
+  }
+
+  &_food{
+    position: relative;
+    top: 390px;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-height: $height_120){
+      top: 310px;
+    }
+    @media screen and (max-height: $height_170){
+      top: 275px;
+    }
+
+    img{
+      @media screen and (max-height: $height_170){
+        width: 70%;
+      }
+    }
+  }
+
+  &_text{
+    position: absolute;
+    z-index: 20;
+    top:0;
+    left:calc(50% - 295px);
+    width: 590px;
+    margin:185px 0 0;
+
+    @media screen and (max-height: $height_120){
+      margin:80px 0 0;
+      width: 500px;
+      left:calc(50% - 250px);
+    }
+    @media screen and (max-height: $height_170){
+      width: 430px;
+      left:calc(50% - 215px);
+    }
+  }
+
+  &_title{
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 61px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #F2EFEC;
+
+    @media screen and (max-height: $height_120){
+      font-size: 40px;
+      line-height: 50px;
+    }
+    @media screen and (max-height: $height_170){
+      font-size: 36px;
+      line-height: 46px;
+    }
+  }
+
+  &_feedback{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 224px;
+    height: 65px;
+    color:$white;
+    background: #000000;
+    box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.15);
+    border-radius: 48px;
+    margin:35px auto 0;
+    cursor: pointer;
+
+    @media screen and (max-height: $height_170){
+      width: 164px;
+      height: 47px;
+      border-radius: 35px;
+      font-size: 12.4755px;
+    }
+  }
+
+  &-sky{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    z-index: 0;
+
+    &_item{
+      svg{
+        position: absolute;
+      }
+      & .sky_1{
+        width: 575px;
+        height: 227px;
+        left: 5%;
+        top: 2%;
+        @media screen and (max-height: $height_170){
+          width: 349px;
+          height: 164px;
+        }
+
+      }
+      & .sky_2{
+        width: 437px;
+        height: 173px;
+        right: 10%;
+        top: 10%;
+
+        @media screen and (max-height: $height_170){
+          width: 349px;
+          height: 164px;
+        }
+      }
+      & .sky_3{
+        width: 329px;
+        height: 160px;
+        left:2%;
+        bottom: 15%;
+
+        @media screen and (max-height: $height_170){
+          width: 249px;
+          height: 140px;
+        }
+      }
+      & .sky_4{
+        width: 456px;
+        height: 270px;
+        bottom: -12%;
+        right: 5%;
+
+        @media screen and (max-height: $height_170){
+          width: 249px;
+          height: 140px;
+        }
+      }
+    }
+  }
+
+  &_blocks{
+    position: relative;
+    margin-top:-85px;
+    z-index:10;
+
+    @media screen and (max-height: $height_170){
+      margin-top:-75px;
+    }
+
+    &__padding{
+      padding:10px 40px 0;
+    }
+  }
+
+  &_wrapper{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-between;
+  }
+
+  &_item{
+    width:calc(25% - 1rem);
+    background: #F4B869;
+    border-radius: 34px;
+    display: flex;
+    flex-flow:column;
+    justify-content: center;
+    padding:25px;
+    height:150px;
+    position: relative;
+
+    @media screen and (max-height: $height_170){
+      height:100px;
+    }
+
+    &:after{
+      position: absolute;
+      content:'';
+      top: -19px;
+      right: -7px;
+      width:64px;
+      height:100px;
+      background:url(../../assets/img/any/flowers.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      @media screen and (max-height: $height_170){
+        top: -33px;
+        right: 0px;
+        width: 40px;
+      }
+
+    }
+
+    &-title{
+      font-weight: bold;
+      font-size: 25px;
+      letter-spacing: 0.2px;
+      color: #A91E23;
+      margin:0 0 15px;
+
+      @media screen and (max-height: $height_170){
+        font-size: 18px;
+      }
+    }
+
+    &-subtitle{
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 0.2px;
+      color: #A91E23;
+      @media screen and (max-height: $height_170){
+        font-size: 11px;
+      }
+    }
+  }
+}

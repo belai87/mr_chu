@@ -67,7 +67,6 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
-                exclude: '/node_modules/'
             },{
                 test: /\.css$/,
                 use: [
@@ -90,8 +89,7 @@ module.exports = {
                     'sass-loader',
                 ],
             },{
-                test: /\.(png|jpg|svg)$/,
-                exclude: '/node_modules/',
+                test: /\.(png|jpg|svg|gif|jpeg)$/,
                 use:{
                     loader: 'file-loader',
                     options: {
@@ -105,7 +103,7 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
-                        outputPath: './assets/fonts',
+                        outputPath: './fonts',
                     },
                 }
             }
